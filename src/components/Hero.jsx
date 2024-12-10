@@ -49,7 +49,7 @@ const Hero = () => {
            <button className="primary-btn px-6 py-3 flex items-center gap-2 text-white bg-secondary hover:bg-secondary-dark rounded-md shadow-md">
   <a
     href="/src/assets/nazira.docx" // Path to your resume file
-    download="Nazira_Resume.docx" // Optional: Specify the file name for download
+    download="/src/assets/nazira.docx" // Optional: Specify the file name for download
     className="flex items-center gap-2"
   >
     Download Resume

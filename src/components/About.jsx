@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import ProfileImage from "../assets/pic.jpg"; // Replace with your image path
+import ProfileImage from "../assets/IMG.png"; // Replace with your image path
 
 const About = () => {
   return (
@@ -17,7 +17,7 @@ const About = () => {
             <img
               src={ProfileImage}
               alt="Profile"
-              className="rounded-lg shadow-lg w-full md:w-4/5 mx-auto"
+              className="shaddow-md w-full md:w-4/5 mx-auto"
             />
           </motion.div>
 
@@ -41,7 +41,7 @@ const About = () => {
               I focus on building responsive, accessible, and efficient web applications that deliver great user experiences.
             </p>
             <button className="primary-btn px-6 py-3 flex items-center gap-2 text-white bg-secondary hover:bg-secondary-dark rounded-md shadow-md">
-              <a href="/resume.pdf" download="Nazira_Resume.pdf">
+              <a href="/src/assets/nazira.docx" download="Nazira_Resume.pdf">
                 Download Resume
               </a>
             </button>

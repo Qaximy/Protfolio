@@ -35,10 +35,10 @@ const Footer = () => {
             <a href="https://instagram.com" className="text-white hover:text-pink-600">
               <FaInstagram className="text-2xl" />
             </a>
-            <a href="https://linkedin.com" className="text-white hover:text-blue-700">
+            <a href="https://www.linkedin.com/in/nazira-batool-5811ab275/" className="text-white hover:text-blue-700">
               <FaLinkedin className="text-2xl" />
             </a>
-            <a href="https://github.com" className="text-white hover:text-gray-400">
+            <a href="https://github.com/Qaximy" className="text-white hover:text-gray-400">
               <FaGithub className="text-2xl" />
             </a>
           </div>

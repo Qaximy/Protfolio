@@ -6,26 +6,26 @@ const projects = [
   {
     id: 1,
     title: "Travel Agency Website",
-    description: "A responsive travel agency website with booking features.",
-    image: "/src/assets/travel.png", // Replace with your image path
+    description: "A responsive travel agency website featuring booking options and destination details.",
+    image: "/src/assets/travel.png",
     technologies: ["HTML", "CSS", "Javascript"],
     github: "https://github.com/Qaximy/travel-tour",
-    LiveDemo: "http://localhost:5176/", // Add valid live demo link
+    LiveDemo: "http://127.0.0.1:5500/Travel/index.html",
   },
   {
     id: 2,
     title: "Coffee Shop Website",
-    description: "A modern coffee shop website with an interactive menu.",
-    image: "/src/assets/coffee.png", // Replace with your image path
-    LiveDemo: "http://localhost:5173/",
+    description: "A modern coffee shop website with an interactive menu and online ordering feature.",
+    image: "/src/assets/coffee.png",
+    LiveDemo: "http://localhost:5174/",
     technologies: ["React.js", "CSS"],
     github: "https://github.com/Qaximy/coffee-shop",
   },
   {
     id: 3,
     title: "Smart-Watch Website",
-    description: "A modern coffee shop website with an interactive menu.",
-    image: "/src/assets/smart.png", // Replace with your image path
+    description: "A showcase website for smartwatches, highlighting features and specifications.",
+    image: "/src/assets/smart.png",
     LiveDemo: "http://localhost:5175/",
     technologies: ["React.js", "CSS"],
     github: "https://github.com/Qaximy/Smart-Watch",
@@ -33,33 +33,60 @@ const projects = [
   {
     id: 4,
     title: "Digital Website",
-    description: "A modern coffee shop website with an interactive menu.",
-    image: "/src/assets/digital.png", // Replace with your image path
+    description: "A sleek digital agency website showcasing services and portfolio.",
+    image: "/src/assets/digital.png",
     LiveDemo: "http://localhost:5176/",
     technologies: ["React.js", "Tailwind CSS"],
-    github: "https://github.com/your-repo",
+    github: "https://github.com/Qaximy/Digital",
   },
   {
     id: 5,
     title: "Hotel Booking Website",
-    description: "A modern coffee shop website with an interactive menu.",
-    image: "/src/assets/hotel.png", // Replace with your image path
-    LiveDemo: "http://localhost:5175/",
+    description: "A hotel booking website with room details, pricing, and reservation features.",
+    image: "/src/assets/hotel.png",
+    LiveDemo: "http://127.0.0.1:5500/Hotel/index.html",
     technologies: ["HTML", "CSS", "Javascript"],
-    github: "https://github.com/Qaximy/travel-tour",
-   
+    github: "https://github.com/Qaximy/Hotel",
   },
   {
     id: 6,
-    title: "Fruit-selling Website",
-    description: "A modern coffee shop website with an interactive menu.",
-    image: "/src/assets/fruit.png", // Replace with your image path
+    title: "Fruit-Selling Website",
+    description: "An e-commerce website for selling fresh fruits online.",
+    image: "/src/assets/fruit.png",
     LiveDemo: "http://localhost:5175/",
     technologies: ["React.js", "Tailwind CSS"],
     github: "https://github.com/Qaximy/Fruit-Selling",
   },
+  {
+    id: 7,
+    title: "Portfolio Website",
+    description: "A personal portfolio website to showcase projects and skills.",
+    image: "/src/assets/about.png",
+    LiveDemo: "http://localhost:5173/",
+    technologies: ["React.js", "Tailwind CSS"],
+    github: "https://github.com/Qaximy/Protfolio",
+  },
+  {
+    id: 8,
+    title: "E-Commerce Website",
+    description: "A comprehensive e-commerce platform for online shopping.",
+    image: "/src/assets/ecomerce.png",
+    LiveDemo: "http://localhost:5173/",
+    technologies: ["React.js", "Tailwind CSS"],
+    github: "https://github.com/Qaximy/ecomerce",
+  },
+  {
+    id: 9,
+    title: "Traveling Website",
+    description: "A dynamic traveling website with trip planning and booking features.",
+    image: "/src/assets/rebel.png",
+    LiveDemo: "http://localhost:5173/",
+    technologies: ["HTML", "CSS", "Javascript"],
+    github: "https://github.com/Qaximy/Ecomerce",
+  },
   // More projects...
 ];
+
 
 const Work = () => {
   return (
