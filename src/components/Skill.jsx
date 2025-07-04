@@ -1,19 +1,20 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaGitAlt, FaPython } from "react-icons/fa";
-import { SiTailwindcss, SiBootstrap } from "react-icons/si";
+import { SiTailwindcss, SiBootstrap, SiNextdotjs } from "react-icons/si";
 
 const skills = [
   { id: 1, name: "HTML5", icon: <FaHtml5 className="text-red-500 text-4xl" /> },
   { id: 2, name: "CSS3", icon: <FaCss3Alt className="text-blue-500 text-4xl" /> },
   { id: 3, name: "JavaScript", icon: <FaJsSquare className="text-yellow-500 text-4xl" /> },
   { id: 4, name: "React.js", icon: <FaReact className="text-blue-400 text-4xl" /> },
-  { id: 5, name: "Tailwind CSS", icon: <SiTailwindcss className="text-teal-400 text-4xl" /> },
-  { id: 6, name: "Bootstrap", icon: <SiBootstrap className="text-purple-500 text-4xl" /> },
-  { id: 7, name: "Git", icon: <FaGitAlt className="text-orange-500 text-4xl" /> },
-  { id: 8, name: "Python", icon: <FaPython className="text-blue-400 text-4xl" /> },
-
+  { id: 5, name: "Next.js", icon: <SiNextdotjs className="text-black dark:text-white text-4xl" /> },
+  { id: 6, name: "Tailwind CSS", icon: <SiTailwindcss className="text-teal-400 text-4xl" /> },
+  { id: 7, name: "Bootstrap", icon: <SiBootstrap className="text-purple-500 text-4xl" /> },
+  { id: 8, name: "Git", icon: <FaGitAlt className="text-orange-500 text-4xl" /> },
+  { id: 9, name: "Python", icon: <FaPython className="text-blue-400 text-4xl" /> },
 ];
+
 
 const Skills = () => {
   return (

@@ -1,7 +1,10 @@
+"use client";
+
 import React from "react";
 import { motion } from "framer-motion";
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
-// Sample project data
+// Project data
 const projects = [
   {
     id: 1,
@@ -10,14 +13,14 @@ const projects = [
     image: "/src/assets/travel.png",
     technologies: ["HTML", "CSS", "Javascript"],
     github: "https://github.com/Qaximy/travel-tour",
-    LiveDemo: "http://127.0.0.1:5500/Travel/index.html",
+    liveDemo: "http://127.0.0.1:5500/Travel/index.html",
   },
   {
     id: 2,
     title: "Coffee Shop Website",
     description: "A modern coffee shop website with an interactive menu and online ordering feature.",
     image: "/src/assets/coffee.png",
-    LiveDemo: "http://localhost:5174/",
+    liveDemo: "http://localhost:5174/",
     technologies: ["React.js", "CSS"],
     github: "https://github.com/Qaximy/coffee-shop",
   },
@@ -26,7 +29,7 @@ const projects = [
     title: "Smart-Watch Website",
     description: "A showcase website for smartwatches, highlighting features and specifications.",
     image: "/src/assets/smart.png",
-    LiveDemo: "http://localhost:5175/",
+    liveDemo: "http://localhost:5175/",
     technologies: ["React.js", "CSS"],
     github: "https://github.com/Qaximy/Smart-Watch",
   },
@@ -35,7 +38,7 @@ const projects = [
     title: "Digital Website",
     description: "A sleek digital agency website showcasing services and portfolio.",
     image: "/src/assets/digital.png",
-    LiveDemo: "http://localhost:5176/",
+    liveDemo: "http://localhost:5176/",
     technologies: ["React.js", "Tailwind CSS"],
     github: "https://github.com/Qaximy/Digital",
   },
@@ -44,7 +47,7 @@ const projects = [
     title: "Hotel Booking Website",
     description: "A hotel booking website with room details, pricing, and reservation features.",
     image: "/src/assets/hotel.png",
-    LiveDemo: "http://127.0.0.1:5500/Hotel/index.html",
+    liveDemo: "http://127.0.0.1:5500/Hotel/index.html",
     technologies: ["HTML", "CSS", "Javascript"],
     github: "https://github.com/Qaximy/Hotel",
   },
@@ -53,7 +56,7 @@ const projects = [
     title: "Fruit-Selling Website",
     description: "An e-commerce website for selling fresh fruits online.",
     image: "/src/assets/fruit.png",
-    LiveDemo: "http://localhost:5175/",
+    liveDemo: "http://localhost:5175/",
     technologies: ["React.js", "Tailwind CSS"],
     github: "https://github.com/Qaximy/Fruit-Selling",
   },
@@ -62,7 +65,7 @@ const projects = [
     title: "Portfolio Website",
     description: "A personal portfolio website to showcase projects and skills.",
     image: "/src/assets/about.png",
-    LiveDemo: "http://localhost:5173/",
+    liveDemo: "http://localhost:5173/",
     technologies: ["React.js", "Tailwind CSS"],
     github: "https://github.com/Qaximy/Protfolio",
   },
@@ -71,7 +74,7 @@ const projects = [
     title: "E-Commerce Website",
     description: "A comprehensive e-commerce platform for online shopping.",
     image: "/src/assets/ecomerce.png",
-    LiveDemo: "http://localhost:5173/",
+    liveDemo: "http://localhost:5173/",
     technologies: ["React.js", "Tailwind CSS"],
     github: "https://github.com/Qaximy/ecomerce",
   },
@@ -80,77 +83,69 @@ const projects = [
     title: "Traveling Website",
     description: "A dynamic traveling website with trip planning and booking features.",
     image: "/src/assets/rebel.png",
-    LiveDemo: "http://localhost:5173/",
+    liveDemo: "http://localhost:5173/",
     technologies: ["HTML", "CSS", "Javascript"],
     github: "https://github.com/Qaximy/Ecomerce",
   },
-  // More projects...
 ];
-
 
 const Work = () => {
   return (
-    <section id="work" className="py-16 bg-gray-100">
-      <div className="container mx-auto px-6 md:px-12 lg:px-20">
-        <div className="text-center">
-          <h2 className="text-4xl font-bold text-primary mb-8">My Work</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            Here are some of the projects I’ve worked on, showcasing my skills
-            in frontend development using modern frameworks and tools.
+    <section id="work" className="py-20 bg-gradient-to-br from-white to-gray-100">
+      <div className="container mx-auto px-6 lg:px-20">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-extrabold text-primary"> My Work</h2>
+          <p className="text-gray-500 max-w-2xl mx-auto mt-4">
+            Some of the projects I've built with modern frameworks and responsive design.
           </p>
         </div>
 
-        {/* Project Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-12">
-          {projects.map((project) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+          {projects.map((project, index) => (
             <motion.div
               key={project.id}
-              initial={{ opacity: 0, y: 50 }}
+              initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
               viewport={{ once: true }}
-              className="bg-white rounded-lg shadow-md overflow-hidden"
+              transition={{ delay: index * 0.1, duration: 0.6 }}
+              className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-transform transform hover:-translate-y-1 overflow-hidden"
             >
-              {/* Project Image */}
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full h-48 object-cover"
+                className="w-full h-48 object-cover rounded-t-2xl"
               />
-              {/* Project Info */}
-              <div className="p-6 space-y-4">
-                <h3 className="text-2xl font-bold text-primary">{project.title}</h3>
-                <p className="text-gray-600">{project.description}</p>
-                {/* Technologies */}
-                <div className="flex gap-2 flex-wrap">
-                  {project.technologies.map((tech, index) => (
+              <div className="p-6 space-y-3">
+                <h3 className="text-xl font-semibold text-gray-800">{project.title}</h3>
+                <p className="text-gray-600 text-sm">{project.description}</p>
+                <div className="flex flex-wrap gap-2 mt-2">
+                  {project.technologies.map((tech, i) => (
                     <span
-                      key={index}
-                      className="px-3 py-1 bg-secondary text-white rounded-full text-sm"
+                      key={i}
+                      className="bg-white shadow-lg text-secondary text-xs px-2 py-1 rounded-full"
                     >
                       {tech}
                     </span>
                   ))}
                 </div>
-                {/* Links */}
-                <div className="flex gap-4 mt-4">
-                  {project.LiveDemo && (
+                <div className="flex items-center gap-4 mt-4">
+                  {project.liveDemo && (
                     <a
-                      href={project.LiveDemo}
+                      href={project.liveDemo}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-primary hover:underline"
+                      className="flex items-center text-primary hover:underline text-sm"
                     >
-                      Live Demo
+                      <FaExternalLinkAlt className="mr-1" /> Live Demo
                     </a>
                   )}
                   <a
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-primary hover:underline"
+                    className="flex items-center text-gray-700 hover:text-black text-sm"
                   >
-                    GitHub
+                    <FaGithub className="mr-1" /> GitHub
                   </a>
                 </div>
               </div>
