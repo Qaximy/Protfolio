@@ -56,11 +56,7 @@ const About = () => {
       <strong>Tailwind CSS</strong>.
     </p>
 
-    {/* <p className="text-lg text-gray-700 max-w-2xl mx-auto leading-relaxed">
-      With hands-on experience creating responsive websites for <strong>travel</strong>,{" "}
-      <strong>tour booking</strong>, <strong>dashboards</strong>, and <strong>personal portfolios</strong>, I focus on
-      delivering websites that are visually stunning, user-friendly, and fully responsive across all devices.
-    </p> */}
+    
   </div>
 </Section>
 

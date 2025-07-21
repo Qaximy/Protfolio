@@ -49,7 +49,7 @@ const Hero = () => {
             className="flex flex-wrap gap-4 justify-center md:justify-start"
           >
             <a
-              href="/assets/nazira.docx"
+              href="/public/assets/nazira.docx"
               download
               className="px-6 py-3 bg-secondary text-white rounded-md shadow-md hover:bg-secondary-dark transition"
             >
@@ -99,7 +99,7 @@ const Hero = () => {
   className="flex justify-center"
 >
   <img
-    src="/src/assets/pics.jpg"
+    src="/assets/pics.jpg"
     alt="Nazira"
     className="rounded-full shadow-lg object-cover w-[300px] h-[300px]"
   />
