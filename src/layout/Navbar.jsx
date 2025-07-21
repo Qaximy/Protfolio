@@ -3,31 +3,11 @@ import { MdMenu } from "react-icons/md";
 import { motion } from "framer-motion";
 
 const NavbarMenu = [
-  {
-    id: 1,
-    title: "Home",
-    link: "/",
-  },
-  {
-    id: 3,
-    title: "About",
-    link: "/about",
-  },
-  {
-    id: 4,
-    title: "Work",
-    link: "/work",
-  },
-  {
-    id: 5,
-    title: "Skill",
-    link: "/Skill",
-  },
-  {
-    id: 6,
-    title: "Contact",
-    link: "/contact",
-  },
+  { id: 1, title: "Home", link: "/" },
+  { id: 3, title: "About", link: "/about" },
+  { id: 4, title: "Work", link: "/work" },
+  { id: 5, title: "Skill", link: "/Skill" },
+  { id: 6, title: "Contact", link: "/contact" },
 ];
 
 const Navbar = () => {
@@ -40,14 +20,12 @@ const Navbar = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.5 }}
-          className="container flex justify-between items-center py-4 md:pt-4"
+          className="container mx-auto flex justify-between items-center py-4 px-6"
         >
-          {/* Logo section */}
           <div className="text-2xl flex items-center gap-2 font-bold uppercase text-secondary">
             <p>Portfolio</p>
           </div>
 
-          {/* Menu section */}
           <div className="hidden md:block">
             <ul className="flex items-center gap-6 text-gray-800">
               {NavbarMenu.map((menu) => (
@@ -63,14 +41,12 @@ const Navbar = () => {
             </ul>
           </div>
 
-          {/* Responsive mobile menu toggle */}
           <div className="md:hidden" onClick={() => setOpen(!open)}>
             <MdMenu className="text-4xl text-gray-800" />
           </div>
         </motion.div>
       </nav>
 
-      {/* Mobile menu section (conditionally rendered) */}
       {open && (
         <motion.div
           initial={{ height: 0 }}
