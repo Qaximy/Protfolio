@@ -99,7 +99,7 @@ const Hero = () => {
   className="flex justify-center"
 >
   <img
-    src="/src/assets/pics.jpg"
+    src="/assets/pics.jpg"
     alt="Nazira"
     className="rounded-full shadow-lg object-cover w-[300px] h-[300px]"
   />

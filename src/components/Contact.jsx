@@ -4,8 +4,6 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { FiMapPin } from "react-icons/fi";
 
-type FormField = "firstName" | "lastName" | "email" | "subject" | "message";
-
 export default function Contact() {
   const [formData, setFormData] = useState({
     firstName: "",
@@ -15,7 +13,7 @@ export default function Contact() {
     message: "",
   });
 
-  const [errors, setErrors] = useState<Record<FormField, string>>({
+  const [errors, setErrors] = useState({
     firstName: "",
     lastName: "",
     email: "",
@@ -25,7 +23,7 @@ export default function Contact() {
 
   const validate = () => {
     let isValid = true;
-    const newErrors: Record<FormField, string> = {
+    const newErrors = {
       firstName: "",
       lastName: "",
       email: "",
@@ -65,7 +63,7 @@ export default function Contact() {
     return isValid;
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!validate()) return;
 
@@ -112,9 +110,7 @@ export default function Contact() {
         </p>
       </div>
 
-      {/* Contact Info + Form */}
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
-        {/* Contact Info */}
         <div className="space-y-8">
           <h2 className="text-4xl font-bold text-primary">Get in Touch</h2>
           <p className="text-gray-600 text-lg">
@@ -122,33 +118,24 @@ export default function Contact() {
           </p>
 
           <div className="space-y-4">
-            {/* Liaison Office */}
             <div className="flex items-start gap-4">
               <FiMapPin className="text-orange-500 text-xl mt-1" />
               <div>
-                <p className="font-semibold text-primary"> Office</p>
+                <p className="font-semibold text-primary">Office</p>
                 <p className="text-gray-600">Software Technology Park Skardu Near Army Public School Skardu</p>
                 <p className="text-gray-600">WhatsApp: +92 3442309271</p>
                 <p className="text-gray-600">Email: qaximy1214@gmail.com</p>
-           
               </div>
-              
             </div>
-
-            {/* Head Office */}
-            
-
-            {/* Malaysia Office */}
-           
           </div>
         </div>
 
-        {/* Contact Form */}
         <form onSubmit={handleSubmit} className="space-y-8 bg-white rounded-3xl shadow-xl p-6 w-full max-w-2xl">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <input
                 type="text"
+                name="firstName"
                 placeholder="First Name"
                 className="w-full px-5 py-3 bg-gray-100 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
                 value={formData.firstName}
@@ -160,6 +147,7 @@ export default function Contact() {
             <div>
               <input
                 type="text"
+                name="lastName"
                 placeholder="Last Name"
                 className="w-full px-5 py-3 bg-gray-100 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
                 value={formData.lastName}
@@ -172,6 +160,7 @@ export default function Contact() {
           <div>
             <input
               type="email"
+              name="email"
               placeholder="Your Email Address"
               className="w-full px-5 py-3 bg-gray-100 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
               value={formData.email}
@@ -183,6 +172,7 @@ export default function Contact() {
           <div>
             <input
               type="text"
+              name="subject"
               placeholder="Subject"
               className="w-full px-5 py-3 bg-gray-100 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
               value={formData.subject}
@@ -193,6 +183,7 @@ export default function Contact() {
 
           <div>
             <textarea
+              name="message"
               rows={5}
               placeholder="Tell us about your travel needs..."
               className="w-full px-5 py-3 bg-gray-100 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
